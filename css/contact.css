@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/* ----------------------- */
+/* base
+/* ----------------------- */
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #171711;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+/* ----------------------- */
+/* header
+/* ----------------------- */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 12;
+}
+
+header .header-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .header-inner .site-title {
+  padding: 30px 58px;
+}
+
+header .header-inner .site-title.black a svg path {
+  fill: #5c5959;
+}
+
+header .header-inner .burger-menu {
+  z-index: 13;
+  display: flex;
+  color: #FFFFFF;
+  margin-top: 30px;
+}
+
+header .header-inner .burger-menu .btn-trigger {
+  margin-right: 7px;
+}
+
+/* ----------------------- */
+/* ハンバーガーメニュー
+/* ----------------------- */
+.burger-btn {
+  z-index: 13;
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 4vw;
+  cursor: pointer;
+}
+
+.burger-btn .bar {
+  display: block;
+  height: 3px;
+  width: 30px;
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+
+.burger-btn .bar.black {
+  background-color: #5c5959;
+}
+
+.menu-box {
+  display: none;
+  width: 65vw;
+  height: 100vw;
+  padding: 180px 200px 390px 200px;
+  z-index: 12;
+  background-color: #222222;
+  opacity: 0.9;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.menu-box .menu-logo {
+  margin: 0 auto;
+}
+
+.menu-box ul li {
+  display: block;
+  margin-top: 30px;
+  font-size: 2.0rem;
+  font-weight: 700;
+  list-style-type: none;
+}
+
+.menu-box ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-box.in {
+  display: block;
+}
+
+#fadeLayer.in {
+  display: block;
+}
+
+#fadeLayer {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 11;
+}
+
+.burger-btn.cross .bar-top {
+  transform: rotate(45deg) translate(8px, 8px);
+  transition: .3s;
+}
+
+.burger-btn.cross .bar-middle {
+  opacity: 0;
+}
+
+.burger-btn.cross .bar-buttom {
+  transform: rotate(-45deg) translate(8px, -8px);
+  transition: .3s;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+/* ----------------------- */
+/* fv
+/* ----------------------- */
+.fv {
+  position: relative;
+  display: flex;
+  height: 60vh;
+  min-height: 450px;
+}
+
+.fv .fv-left .fv-left-img {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  z-index: 5;
+  width: 76.4%;
+  height: 86%;
+}
+
+.fv .fv-left .fv-text {
+  color: #FFFFFF;
+  position: absolute;
+  z-index: 10;
+  right: 15%;
+  top: 20%;
+}
+
+.fv .fv-left .fv-text .fv-title {
+  font-size: 7.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.fv .fv-left .fv-text .fv-concept {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.fv .fv-img-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #222;
+  object-fit: cover;
+  width: 50%;
+  height: 60vh;
+  min-height: 450px;
+}
+
+/* ----------------------- */
+/* contact
+/* ----------------------- */
+.contact {
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 1.6rem;
+  padding: 0 6.5vw;
+}
+
+.contact .contact-description {
+  margin-top: 120px;
+}
+
+.contact .contact-content-top {
+  margin-top: 55px;
+}
+
+.contact .contact-content-top span {
+  width: 34px;
+  background-color: #333333;
+  color: #FFFFFF;
+  margin-left: 8px;
+  padding: 3px 5px;
+}
+
+.contact .contact-content-top .contact-content-top-list {
+  margin-top: 10px;
+  display: flex;
+}
+
+.contact .contact-content-top .contact-content-top-list .input-selection {
+  margin-right: 5px;
+}
+
+.contact .contact-content-top .contact-content-top-list .input-selection-btn {
+  margin-left: 50px;
+}
+
+.contact .contact-content {
+  margin-top: 45px;
+}
+
+.contact .contact-content input {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact .contact-content span {
+  width: 34px;
+  background-color: #333333;
+  color: #FFFFFF;
+  margin-left: 8px;
+  padding: 3px 5px;
+}
+
+.contact .contact-content textarea {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact .contact-policy {
+  font-weight: 700;
+}
+
+.contact .submit {
+  margin-top: 43px;
+  margin-bottom: 41px;
+  text-align: center;
+}
+
+.contact .submit .checkbox {
+  margin-right: 10px;
+}
+
+.contact .submit-btn {
+  text-align: center;
+}
+
+/* ----------------------- */
+/* submit
+/* ----------------------- */
+#btn-read-more {
+  display: inline-block;
+  width: 160px;
+  line-height: 32px;
+  background-color: #171711;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* footer
+/* ----------------------- */
+footer {
+  background-color: #525252;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  margin-top: 120px;
+}
+
+footer small {
+  display: inline-block;
+  color: #FFFFFF;
+  margin-top: 15px;
+}
+
+/* レスポンシブ タブレット
+/* ----------------------- */
+@media screen and (max-width: 768px) {
+  /* ----------------------- */
+  /* header
+/* ----------------------- */
+  * {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+  header .header-inner .site-title {
+    padding: 30px 7.5vw;
+  }
+  header .header-inner .burger-menu {
+    z-index: 10;
+    display: flex;
+    color: #FFFFFF;
+    margin-top: 30px;
+  }
+  header .header-inner .burger-menu .btn-trigger {
+    margin-right: 7px;
+  }
+  .fv .fv-left .fv-text .fv-title {
+    font-size: 5.2rem;
+  }
+  .fv .fv-left .fv-text .fv-concept {
+    font-size: 1.6rem;
+  }
+  .contact .contact-content-top .contact-content-top-list {
+    display: block;
+  }
+  .contact .contact-content-top .contact-content-top-list .input-selection-btn {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
+/* レスポンシブ スマホ
+/* ----------------------- */
+/*# sourceMappingURL=contact.css.map */
